@@ -171,12 +171,6 @@ main {
     }
 }
 
-.hide-warning {
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-
 
 @media(min-width: 627px) {
     header {
@@ -227,6 +221,8 @@ main {
         border: none;
         background: none;
         color: var(--always-white);
+        cursor: pointer;
     }
+    
 }
 
