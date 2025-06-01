@@ -1,4 +1,4 @@
-const items = []
+let items = []
 
 function addItem() {
     const itemName = document.querySelector("#item").value
@@ -15,6 +15,8 @@ function addItem() {
     items.push(item)
 
     document.querySelector("#item").value = ""
+    
+
 
     showItemList()
 
@@ -42,6 +44,7 @@ function showItemList() {
             `
     })
 
+    localStorage.setItem("items", JSON.stringify(items))
 }
 
 
@@ -74,4 +77,16 @@ function addHideWarningClass() {
     document.querySelector(".warning").classList.add("hide-warning")
 }
 
+function verifyLocalStorageItems(){
+    const itemsLocalStorage = localStorage.getItem("items")
+
+    if (itemsLocalStorage) {
+        items = JSON.parse(LocalStorageItems))
+
+        showItemList
+    }
+
+}
+
+verifyLocalStorageItems()
 
