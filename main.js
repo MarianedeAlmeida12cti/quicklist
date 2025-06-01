@@ -26,6 +26,7 @@ function showItemList() {
     const sectionList = document.querySelector(".list")
     sectionList.textContent = ""
 
+    items.sort((a, b) => Number(itemA.checked) - Number(itemB.checked))
     items.map((item, index) => { 
         sectionList.innerHTML += `
         <div class="item">
@@ -78,9 +79,9 @@ function addHideWarningClass() {
 }
 
 function verifyLocalStorageItems(){
-    const itemsLocalStorage = localStorage.getItem("items")
+    const LocalStorageItems = localStorage.getItem("items")
 
-    if (itemsLocalStorage) {
+    if (LocalStorageItems) {
         items = JSON.parse(LocalStorageItems))
 
         showItemList
@@ -89,4 +90,6 @@ function verifyLocalStorageItems(){
 }
 
 verifyLocalStorageItems()
+
+
 
