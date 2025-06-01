@@ -191,4 +191,19 @@ main {
         align-items: center;
         gap: .8rem;
     }
+
+    i {
+        font-size: 2rem;
+    }
+
+    button {
+        border: none;
+        background: none;
+        color: var(--always-white');
+    }
+}
+
+.hide-warning {
+    opacity: 0;
+    transform: translateY(-10px);
 }
